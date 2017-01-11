@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Place Autocomplete</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  </head>
+  <body>
+    <script src="js/address.js"></script>
+    <input id="pac-input" class="controls" type="text"
+        placeholder="Enter a location">
+    <div id="type-selector" class="controls">
+      <input type="radio" name="type" id="changetype-all" checked="checked">
+      <label for="changetype-all">All</label>
+
+      <input type="radio" name="type" id="changetype-establishment">
+      <label for="changetype-establishment">Establishments</label>
+
+      <input type="radio" name="type" id="changetype-address">
+      <label for="changetype-address">Addresses</label>
+
+      <input type="radio" name="type" id="changetype-geocode">
+      <label for="changetype-geocode">Geocodes</label>
+    </div>
+    <div id="map" style=""></div>
+    <div id="placesOptions" style="">
+      <label><h1><span class="label label-success">Search Places</span></h1></label>
+      <hr /> <label style=""><h4><span class="label label-default">Select category for a search</span></h4></label><br />
+      <br />
+      <span class="label label-info"><a href="index.html" id="openDirection">Search Address/Establishments</a><br /></span>
+      <span class="label label-info"><a href="directions.html" id="openDirection">Find Directions</a><br /></span>
+      <span class="label label-info"><a href="hotels.html" id="openHotels">Find Hotels in a city</a><br /></span>
+      &nbsp;
+    </div>
+    <script>
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+     
+       
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIacHHJrYBkMAsw0KJ38GjwiuvKB5re34&libraries=places&callback=initMap"
+        async defer></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Place Autocomplete Hotel Search</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+
+  <body>
+  <script src="js/hotel.js"></script>
+  <div>
+    <div id="locationField" >
+            <span class="label label-info">Find Hotels in:</span>
+    
+            <input id="autocomplete" class="controls-hotels" type="text"
+        placeholder="Enter a city">    
+    </div>
+</div>
+    <div id="map"></div>
+    <div id="placesOptions">
+      <label><h1><span class="label label-success">Search Places</span></h1></label>
+      <hr /> <label style=""><h4><span class="label label-default">Select category for a search</span></h4></label><br />
+      <br />
+      <span class="label label-info"><a href="index.html" id="openDirection">Search Address/Establishments</a><br /></span>
+      <span class="label label-info"><a href="directions.html" id="openDirection">Find Directions</a><br /></span>
+      <span class="label label-info"><a href="hotels.html" id="openHotels">Find Hotels in a city</a><br /></span>
+      &nbsp;
+    </div>
+    <div id="listing">
+      <table id="resultsTable">
+        <tbody id="results"></tbody>
+      </table>
+    </div>
+
+    <div style="display: none">
+      <div id="info-content">
+        <table>
+          <tr id="iw-url-row" class="iw_table_row">
+            <td id="iw-icon" class="iw_table_icon"></td>
+            <td id="iw-url"></td>
+          </tr>
+          <tr id="iw-address-row" class="iw_table_row">
+            <td class="iw_attribute_name">Address:</td>
+            <td id="iw-address"></td>
+          </tr>
+          <tr id="iw-phone-row" class="iw_table_row">
+            <td class="iw_attribute_name">Telephone:</td>
+            <td id="iw-phone"></td>
+          </tr>
+          <tr id="iw-rating-row" class="iw_table_row">
+            <td class="iw_attribute_name">Rating:</td>
+            <td id="iw-rating"></td>
+          </tr>
+          <tr id="iw-website-row" class="iw_table_row">
+            <td class="iw_attribute_name">Website:</td>
+            <td id="iw-website"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIacHHJrYBkMAsw0KJ38GjwiuvKB5re34&libraries=places&callback=initMap"
+        async defer></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Place Autocomplete directions</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <script src="js/direction.js"></script>
+    <input id="origin-input" class="controls-directions" type="text"
+        placeholder="Enter an origin location">
+
+    <input id="destination-input" class="controls-directions" type="text"
+        placeholder="Enter a destination location">
+
+    <div id="mode-selector" class="controls-directions">
+      <input type="radio" name="type" id="changemode-walking" checked="checked">
+      <label for="changemode-walking">Walking</label>
+
+      <input type="radio" name="type" id="changemode-transit">
+      <label for="changemode-transit">Transit</label>
+
+      <input type="radio" name="type" id="changemode-driving">
+      <label for="changemode-driving">Driving</label>
+    </div>
+
+    <div id="map" ></div>
+    <div id="placesOptions" >
+      <label><h1><span class="label label-success">Search Places</span></h1></label>
+      <hr /> <label style=""><h4><span class="label label-default">Select category for a search</span></h4></label><br />
+      <br />
+      <span class="label label-info"><a href="index.html" id="openDirection">Search Address/Establishments</a><br /></span>
+      <span class="label label-info"><a href="directions.html" id="openDirection">Find Directions</a><br /></span>
+      <span class="label label-info"><a href="hotels.html" id="openHotels">Find Hotels in a city</a><br /></span>
+      &nbsp;
+    </div>
+   
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIacHHJrYBkMAsw0KJ38GjwiuvKB5re34&libraries=places&callback=initMap"
+        async defer></script>
+  </body>
+</html>
